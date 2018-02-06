@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HelloAndroid</string>
+    <string name="address">2465 Latham\nSt Mountain View, CA 94043</string>
+    <string name="phone">650-555-5555</string>
+    <string name="name">udacity</string>
+    <string name="introduction">we\ntogether</string>
+    <string name="work">Work</string>
+    <string name="study">Study</string>
+</resources>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
+
+    <!--Background image takes up the whole screen-->-->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/angelo" />
+
+    <!--Introduction text-->
+    <TextView
+        android:id="@+id/introduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/centerShim"
+        android:layout_above="@+id/hexagon"
+        android:layout_marginBottom="@dimen/d"
+        android:maxLines="3"
+        android:text="@string/introduction"
+        android:textAppearance="@style/introduction"
+        android:paddingLeft="@dimen/d"/>
+
+    <!--Hexagon shape previously created in the drawable folder-->
+    <Button
+        android:id="@+id/hexagon"
+        android:layout_width="@dimen/hex_width"
+        android:layout_height="@dimen/hex_weight"
+        android:layout_centerVertical="true"
+        android:rotation="-30"
+        android:text= "@string/study"
+        android:textAppearance="@style/message"
+        android:fontFamily="cursive"
+        android:background="@drawable/hexagon"
+        android:onClick="study" />
+
+    <Button
+        android:id="@+id/hexagon1"
+        android:layout_width="@dimen/hex_width"
+        android:layout_height="@dimen/hex_weight"
+        android:layout_below="@+id/hexagon"
+        android:layout_marginTop="@dimen/d"
+        android:rotation="-30"
+        android:text= "@string/work"
+        android:textAppearance="@style/message"
+        android:fontFamily="cursive"
+        android:background="@drawable/hexagon"
+        android:onClick="join" />
+
+
+    <!--Place an imaginary element to split the screen in two-->
+    <View
+        android:id="@+id/centerShim"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/logo"
+        android:layout_alignEnd="@+id/logo"
+        android:layout_alignRight="@+id/logo"
+        android:orientation="vertical">
+
+
+        <!--Company Name-->
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:fontFamily="sans-serif-condensed"
+            android:onClick="onClick"
+            android:text="@string/name"
+            android:textAllCaps="true"
+            android:gravity="end"
+            android:textAppearance="@style/address"
+            android:layout_marginBottom="@dimen/d"/>
+
+        <!--Company Address-->
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="map"
+            android:clickable="true"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="end"
+            android:maxLines="2"
+            android:text="@string/address"
+            android:textAppearance="@style/address" />
+
+
+        <!--Company Phone-->
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autoLink="phone"
+            android:clickable="true"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/phone"
+            android:gravity="end"
+            android:textAppearance="@style/address" />
+    </LinearLayout>
+
+    <!--Logo image-->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:src="@drawable/logo" />
+
+
+</RelativeLayout>
+
+
